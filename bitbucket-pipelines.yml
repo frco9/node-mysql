@@ -1,0 +1,14 @@
+# This is a sample build configuration for Javascript.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Dockerhub as your build environment.
+image: stonepitt/js-mysql
+
+pipelines:
+  default:
+    - step:
+        script: # Modify the commands below to build your repository.
+          - npm install mysqljs/mysql
+          - /etc/init.d/mysql start
+          - mysql -uroot -e 'create database nodejs'
+          - node test.js
