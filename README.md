@@ -15,7 +15,7 @@ Just copy/paste the YML below in your bitbucket-pipelines.yml and adapt the scri
 # Only use spaces to indent your .yml configuration.
 # -----
 # You can specify a custom docker image from Dockerhub as your build environment.
-image: stonepitt/js-mysql
+image: spittet/node-mysql
 
 pipelines:
   default:
@@ -57,7 +57,7 @@ This image is built from the official Node.js image at https://hub.docker.com/_/
 Your Dockerfile won't need to have an ENTRYPOINT or CMD line as Bitbucket Pipelines will run the script commands that you put in your bitbucket-pipelines.yml file instead.
 
 ```
-FROM node:5.11.0
+FROM node:4.6
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update \
   && apt-get install -y mysql-server mysql-client libmysqlclient-dev \
