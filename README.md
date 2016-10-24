@@ -2,7 +2,7 @@
 
 This repository contains a Dockerfile as well as a simple example that shows how you can run your own Docker container with Node.js and MySQL on Bitbucket Pipelines.
 
-The Docker image is using node 4.6 and MySQL 5.5
+The Docker image is using node 6.9.1 and MySQL 5.5
 
 ## Quickstart
 
@@ -57,7 +57,7 @@ This image is built from the official Node.js image at https://hub.docker.com/_/
 Your Dockerfile won't need to have an ENTRYPOINT or CMD line as Bitbucket Pipelines will run the script commands that you put in your bitbucket-pipelines.yml file instead.
 
 ```
-FROM node:4.6
+FROM node:6.9.1
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update \
   && apt-get install -y mysql-server mysql-client libmysqlclient-dev \
@@ -85,3 +85,5 @@ docker run -i -t <your-docker-account>/node-mysql /bin/bash
 ```bash
 docker push <your-docker-account>/node-mysql
 ```
+
+This is a fork of https://bitbucket.org/spittet/node-mysql
