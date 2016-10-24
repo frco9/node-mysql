@@ -15,7 +15,7 @@ Just copy/paste the YML below in your bitbucket-pipelines.yml and adapt the scri
 # Only use spaces to indent your .yml configuration.
 # -----
 # You can specify a custom docker image from Dockerhub as your build environment.
-image: spittet/node-mysql
+image: dominicbartl/node-mysql
 
 pipelines:
   default:

@@ -1,4 +1,4 @@
-FROM node:4.6
+FROM node:6.9.1
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update \
   && apt-get install -y mysql-server mysql-client libmysqlclient-dev \
