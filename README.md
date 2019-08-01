@@ -2,7 +2,7 @@
 
 This repository contains a Dockerfile as well as a simple example that shows how you can run your own Docker container with Node.js and MySQL on Bitbucket Pipelines.
 
-The Docker image is using node 6.9.1 and MySQL 5.5
+The Docker image is using node 12.7 and MariaDB 10.4
 
 ## Quickstart
 
